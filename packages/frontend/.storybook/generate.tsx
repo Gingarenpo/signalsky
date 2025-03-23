@@ -146,14 +146,14 @@ function toStories(component: string): Promise<string> {
 							local={<identifier name='Meta' /> as estree.Identifier}
 							imported={<identifier name='Meta' /> as estree.Identifier}
 						/> as estree.ImportSpecifier,
-						...(hasImplStories
-							? []
-							: [
-									<import-specifier
-										local={<identifier name='StoryObj' /> as estree.Identifier}
-										imported={<identifier name='StoryObj' /> as estree.Identifier}
-									/> as estree.ImportSpecifier,
-								]),
+						// ...(hasImplStories
+						// 	? []
+						// 	: [
+						// 			<import-specifier
+						// 				local={<identifier name='StoryObj' /> as estree.Identifier}
+						// 				imported={<identifier name='StoryObj' /> as estree.Identifier}
+						// 			/> as estree.ImportSpecifier,
+						// 		]),
 					]}
 				/> as estree.ImportDeclaration,
 				...(hasMsw
@@ -395,6 +395,7 @@ function toStories(component: string): Promise<string> {
 // glob('src/{components,pages,ui,widgets}/**/*.vue')
 (async () => {
 	const globs = await Promise.all([
+		glob('src/components/space-community/Mk*.vue'),
 		glob('src/components/global/Mk*.vue'),
 		glob('src/components/global/RouterView.vue'),
 		glob('src/components/MkAbuseReportWindow.vue'),

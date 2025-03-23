@@ -11042,6 +11042,16 @@ export interface Locale extends ILocale {
          */
         "serverHostPlaceholder": string;
     };
+    "spaceCommunity": {
+        /**
+         * スペース（Beta）
+         */
+        "name": string;
+        /**
+         * スペースに参加する
+         */
+        "joinTitle": string;
+    };
 }
 declare const locales: {
     [lang: string]: Locale;

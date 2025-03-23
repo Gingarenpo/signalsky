@@ -2954,3 +2954,8 @@ _search:
   pleaseEnterServerHost: "サーバーのホストを入力してください"
   pleaseSelectUser: "ユーザーを選択してください"
   serverHostPlaceholder: "例: misskey.example.com"
+
+# Space
+spaceCommunity:
+  name: "スペース（Beta）"
+  joinTitle: "スペースに参加する"

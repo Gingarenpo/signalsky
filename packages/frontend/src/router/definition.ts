@@ -585,6 +585,12 @@ const routes: RouteDef[] = [{
 	path: '/redirect-test',
 	redirect: $i ? `@${$i.username}` : '/',
 	loginRequired: true,
+},
+{
+	// スペース・コミュニティ用テスト
+	path: '/space-community',
+	name: 'space-community',
+	component: $i ? page(() => import('@/pages/space-community/index.vue')) : page(() => import('@/pages/welcome.vue')) ,
 }, {
 	path: '/:(*)',
 	component: page(() => import('@/pages/not-found.vue')),
