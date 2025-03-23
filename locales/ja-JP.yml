@@ -2975,3 +2975,7 @@ midi_kakiko_input: "MMLを入力"
 midi_kakiko_error: "MMLの解釈に失敗したか、作成に失敗しました"
 midi_kakiko_complete: "MIDIカキコしました。ドライブに保存されているはずですよ"
 midi_kakiko_send: "作成！"
+# Space
+spaceCommunity:
+  name: "スペース（Beta）"
+  joinTitle: "スペースに参加する"

@@ -11108,6 +11108,16 @@ export interface Locale extends ILocale {
      * 作成！
      */
     "midi_kakiko_send": string;
+    "spaceCommunity": {
+        /**
+         * スペース（Beta）
+         */
+        "name": string;
+        /**
+         * スペースに参加する
+         */
+        "joinTitle": string;
+    };
 }
 declare const locales: {
     [lang: string]: Locale;
