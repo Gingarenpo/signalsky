@@ -1,7 +1,7 @@
 {
 	"name": "misskey",
-	"version": "2025.3.0-beta.0",
-	"codename": "nasubi",
+	"version": "2025-3.0-Fix2",
+	"codename": "1H3GYRDK6",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/misskey-dev/misskey.git"
