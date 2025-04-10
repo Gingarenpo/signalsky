@@ -398,3 +398,6 @@ export * as 'users/search-by-username-and-host' from './endpoints/users/search-b
 export * as 'users/show' from './endpoints/users/show.js';
 export * as 'users/update-memo' from './endpoints/users/update-memo.js';
 export * as 'v2/admin/emoji/list' from './endpoints/v2/admin/emoji/list.js';
+
+// Add Endpoints
+export * as 'midi_kakiko' from './endpoints/midi-kakiko/kakiko.js';
