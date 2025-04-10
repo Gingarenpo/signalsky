@@ -7,6 +7,8 @@ import { KakikoService } from './KakikoService.js';
 import { DriveFileEntityService } from '@/core/entities/DriveFileEntityService.js';
 import { DriveService } from '@/core/DriveService.js';
 
+import fs from 'fs';
+
 // 多分APIの情報系
 export const meta = {
 	tags: ['midi_kakiko'],
@@ -68,6 +70,15 @@ export default class extends Endpoint<typeof meta, typeof paramDef> { // eslint-
 				folderId: null,
 				force: false,
 			});
+			
+			// この時点で多分OKなのでファイル消しても問題なさげ
+			try {
+				fs.unlinkSync(file);
+			} catch (e) {
+				console.error(e);
+			}
+
+
 			return await this.df.pack(driveFile, { self: true });
 		});
 	}
