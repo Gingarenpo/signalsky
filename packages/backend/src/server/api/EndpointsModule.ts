@@ -10,6 +10,7 @@ import * as endpointsObject from './endpoint-list.js';
 import { GetterService } from './GetterService.js';
 import { ApiLoggerService } from './ApiLoggerService.js';
 import type { Provider } from '@nestjs/common';
+import { KakikoService } from './endpoints/midi-kakiko/KakikoService.js';
 
 const endpoints = Object.entries(endpointsObject);
 const endpointProviders = endpoints.map(([path, endpoint]): Provider => ({ provide: `ep:${path}`, useClass: endpoint.default }));
@@ -22,6 +23,7 @@ const endpointProviders = endpoints.map(([path, endpoint]): Provider => ({ provi
 		GetterService,
 		ApiLoggerService,
 		...endpointProviders,
+		KakikoService,
 	],
 	exports: [
 		...endpointProviders,
