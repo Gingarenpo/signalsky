@@ -2958,4 +2958,13 @@ _search:
 # Space
 spaceCommunity:
   name: "スペース（Beta）"
+  loadingSpaces: "スペースを読み込み中…"
   joinTitle: "スペースに参加する"
+  makeSpace: "スペースを作成する"
+  makeSpaceDescription: "あなたがホストとなり、スペースを作成します。"
+  description: "X（旧Twitter）で実装されているスペースを、しぐなるすきーでも。まだBeta版のため、テスターを募集しています。なお、しぐなるすきー以外の方との相互通信は行えませんのでご注意ください。"
+  openSpaces: "現在開催中のスペース"
+  openSpacesDescription: "現在開催しているスペースの一覧です。ホストと、参加しているユーザーが確認できます。"
+  noOpenSpaces: "現在開催しているスペースはありません。"
+  hostDescription: "{name}さんがホストです"
+  memberDescription: "{count}人が参加しています"

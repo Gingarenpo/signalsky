@@ -36,6 +36,10 @@ SPDX-License-Identifier: AGPL-3.0-only
 				</component>
 			</template>
 			<div :class="$style.divider"></div>
+				<MkA v-tooltip.noDelay.right="i18n.ts.spaceCommunity.name" :class="$style.item" :activeClass="$style.active" to="/space-community" exact>
+					<i :class="$style.itemIcon" class="ti ti-microphone ti-fw"></i><span :class="$style.itemText">{{ i18n.ts.spaceCommunity.name }}</span>
+				</MkA>
+			<div :class="$style.divider"></div>
 			<MkA v-if="$i != null && ($i.isAdmin || $i.isModerator)" v-tooltip.noDelay.right="i18n.ts.controlPanel" :class="$style.item" :activeClass="$style.active" to="/admin">
 				<i :class="$style.itemIcon" class="ti ti-dashboard ti-fw"></i><span :class="$style.itemText">{{ i18n.ts.controlPanel }}</span>
 			</MkA>

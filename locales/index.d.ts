@@ -11048,9 +11048,45 @@ export interface Locale extends ILocale {
          */
         "name": string;
         /**
+         * スペースを読み込み中…
+         */
+        "loadingSpaces": string;
+        /**
          * スペースに参加する
          */
         "joinTitle": string;
+        /**
+         * スペースを作成する
+         */
+        "makeSpace": string;
+        /**
+         * あなたがホストとなり、スペースを作成します。
+         */
+        "makeSpaceDescription": string;
+        /**
+         * X（旧Twitter）で実装されているスペースを、しぐなるすきーでも。まだBeta版のため、テスターを募集しています。なお、しぐなるすきー以外の方との相互通信は行えませんのでご注意ください。
+         */
+        "description": string;
+        /**
+         * 現在開催中のスペース
+         */
+        "openSpaces": string;
+        /**
+         * 現在開催しているスペースの一覧です。ホストと、参加しているユーザーが確認できます。
+         */
+        "openSpacesDescription": string;
+        /**
+         * 現在開催しているスペースはありません。
+         */
+        "noOpenSpaces": string;
+        /**
+         * {name}さんがホストです
+         */
+        "hostDescription": ParameterizedString<"name">;
+        /**
+         * {count}人が参加しています
+         */
+        "memberDescription": ParameterizedString<"count">;
     };
 }
 declare const locales: {

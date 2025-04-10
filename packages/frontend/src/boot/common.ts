@@ -32,8 +32,12 @@ export async function common(createVue: () => App<Element>) {
 
 	if (_DEV_) {
 		console.warn('Development mode!!!');
+		console.info(i18n.ts.spaceJoinTitle);
 
 		console.info(`vue ${vueVersion}`);
+
+		// Languageのリセットを行うため
+		localStorage.removeItem('locale');
 
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		(window as any).$i = $i;
@@ -293,26 +297,28 @@ export async function common(createVue: () => App<Element>) {
 
 	removeSplash();
 
+
+	/* 邪魔すぎるので消す */
 	//#region Self-XSS 対策メッセージ
-	console.log(
-		`%c${i18n.ts._selfXssPrevention.warning}`,
-		'color: #f00; background-color: #ff0; font-size: 36px; padding: 4px;',
-	);
-	console.log(
-		`%c${i18n.ts._selfXssPrevention.title}`,
-		'color: #f00; font-weight: 900; font-family: "Hiragino Sans W9", "Hiragino Kaku Gothic ProN", sans-serif; font-size: 24px;',
-	);
-	console.log(
-		`%c${i18n.ts._selfXssPrevention.description1}`,
-		'font-size: 16px; font-weight: 700;',
-	);
-	console.log(
-		`%c${i18n.ts._selfXssPrevention.description2}`,
-		'font-size: 16px;',
-		'font-size: 20px; font-weight: 700; color: #f00;',
-	);
-	console.log(i18n.tsx._selfXssPrevention.description3({ link: 'https://misskey-hub.net/docs/for-users/resources/self-xss/' }));
-	//#endregion
+	// console.log(
+	// 	`%c${i18n.ts._selfXssPrevention.warning}`,
+	// 	'color: #f00; background-color: #ff0; font-size: 36px; padding: 4px;',
+	// );
+	// console.log(
+	// 	`%c${i18n.ts._selfXssPrevention.title}`,
+	// 	'color: #f00; font-weight: 900; font-family: "Hiragino Sans W9", "Hiragino Kaku Gothic ProN", sans-serif; font-size: 24px;',
+	// );
+	// console.log(
+	// 	`%c${i18n.ts._selfXssPrevention.description1}`,
+	// 	'font-size: 16px; font-weight: 700;',
+	// );
+	// console.log(
+	// 	`%c${i18n.ts._selfXssPrevention.description2}`,
+	// 	'font-size: 16px;',
+	// 	'font-size: 20px; font-weight: 700; color: #f00;',
+	// );
+	// console.log(i18n.tsx._selfXssPrevention.description3({ link: 'https://misskey-hub.net/docs/for-users/resources/self-xss/' }));
+	// //#endregion
 
 	return {
 		isClientUpdated,
