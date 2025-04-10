@@ -2954,3 +2954,11 @@ _search:
   pleaseEnterServerHost: "サーバーのホストを入力してください"
   pleaseSelectUser: "ユーザーを選択してください"
   serverHostPlaceholder: "例: misskey.example.com"
+
+
+# MIDI KAKIKO
+midi_kakiko: "MIDIカキコ"
+midi_kakiko_input: "MMLを入力"
+midi_kakiko_error: "MMLの解釈に失敗したか、作成に失敗しました"
+midi_kakiko_complete: "MIDIカキコしました。ドライブに保存されているはずですよ"
+midi_kakiko_send: "作成！"

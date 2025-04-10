@@ -89,6 +89,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 			<button v-tooltip="i18n.ts.hashtags" class="_button" :class="[$style.footerButton, { [$style.footerButtonActive]: withHashtags }]" @click="withHashtags = !withHashtags"><i class="ti ti-hash"></i></button>
 			<button v-if="postFormActions.length > 0" v-tooltip="i18n.ts.plugins" class="_button" :class="$style.footerButton" @click="showActions"><i class="ti ti-plug"></i></button>
 			<button v-tooltip="i18n.ts.emoji" :class="['_button', $style.footerButton]" @click="insertEmoji"><i class="ti ti-mood-happy"></i></button>
+			<button v-tooltip="i18n.ts.midi_kakiko" :class="['_button', $style.footerButton]" @click="midiKakiko"><i class="ti ti-music"></i></button>
 			<button v-if="showAddMfmFunction" v-tooltip="i18n.ts.addMfmFunction" :class="['_button', $style.footerButton]" @click="insertMfmFunction"><i class="ti ti-palette"></i></button>
 		</div>
 		<div :class="$style.footerRight">
@@ -1072,6 +1073,28 @@ onMounted(() => {
 defineExpose({
 	clear,
 });
+
+
+/* ADD Gingarenpo MIDI-KAKIKO */
+async function midiKakiko() {
+	const manualShowing = ref(true);
+	// カキコダイアログを開く
+	await os.popup(defineAsyncComponent(() => import('@/components/midi-kakiko/MkMidiKakiko.vue')), {
+		manualShowing: manualShowing,
+	}, {
+
+		done:
+			// ドライブへの書き込みが終わった場合
+			(file) => {
+				files.value.push(file);
+				manualShowing.value = false;
+			},
+		closed:
+			() => {
+				manualShowing.value = false;
+			}
+	})
+}
 </script>
 
 <style lang="scss" module>

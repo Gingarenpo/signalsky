@@ -11042,6 +11042,26 @@ export interface Locale extends ILocale {
          */
         "serverHostPlaceholder": string;
     };
+    /**
+     * MIDIカキコ
+     */
+    "midi_kakiko": string;
+    /**
+     * MMLを入力
+     */
+    "midi_kakiko_input": string;
+    /**
+     * MMLの解釈に失敗したか、作成に失敗しました
+     */
+    "midi_kakiko_error": string;
+    /**
+     * MIDIカキコしました。ドライブに保存されているはずですよ
+     */
+    "midi_kakiko_complete": string;
+    /**
+     * 作成！
+     */
+    "midi_kakiko_send": string;
 }
 declare const locales: {
     [lang: string]: Locale;
