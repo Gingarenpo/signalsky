@@ -2968,3 +2968,10 @@ spaceCommunity:
   noOpenSpaces: "現在開催しているスペースはありません。"
   hostDescription: "{name}さんがホストです"
   memberDescription: "{count}人が参加しています"
+
+# MIDI KAKIKO
+midi_kakiko: "MIDIカキコ"
+midi_kakiko_input: "MMLを入力"
+midi_kakiko_error: "MMLの解釈に失敗したか、作成に失敗しました"
+midi_kakiko_complete: "MIDIカキコしました。ドライブに保存されているはずですよ"
+midi_kakiko_send: "作成！"
