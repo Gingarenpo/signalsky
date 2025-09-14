@@ -10,6 +10,7 @@ import { MiAccessToken } from './AccessToken.js';
 import { MiRole } from './Role.js';
 import { MiDriveFile } from './DriveFile.js';
 
+// misskey-js の notificationTypes と同期すべし
 export type MiNotification = {
 	type: 'note';
 	id: string;
@@ -75,6 +76,12 @@ export type MiNotification = {
 	id: string;
 	createdAt: string;
 	roleId: MiRole['id'];
+} | {
+	type: 'chatRoomInvitationReceived';
+	id: string;
+	createdAt: string;
+	notifierId: MiUser['id'];
+	invitationId: string;
 } | {
 	type: 'achievementEarned';
 	id: string;
