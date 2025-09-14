@@ -1,7 +1,7 @@
 {
 	"name": "misskey",
-	"version": "2025-3.0-Fix2",
-	"codename": "1H3GYRDK6",
+	"version": "2025-9.0-Fix0",
+	"codename": "1H33S",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/misskey-dev/misskey.git"
